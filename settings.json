@@ -1,14 +1,30 @@
 {
     "runnerSettings": {
-        "uri": "http://localhost:8080",
+        "uri": "http://localhost:8888",
         "scope": "user-library-read playlist-modify-public ugc-image-upload",
         "collected_features": ["energy", "tempo", "danceability", "key", "loudness", "valence", "speechiness", "liveness", "instrumentalness", "duration_ms"],
         "collected_track_info": ["name", "artist_name", "id", "uri"],
         "save_liked_songs": true,
-        "save_new_playlist": true
+        "save_new_playlist": true,
+        "max_size": 0
     },
     "playlistSettings": {
-        "Mild": 5
+        "feature_letters": {
+            "E": "energy", 
+            "T": "tempo", 
+            "D": "danceability",
+            "K": "key",
+            "L": "loudness",
+            "V": "valence",
+            "S": "speechiness",
+            "A": "liveliness",
+            "I": "instrumentalness",
+            "M": "duration_ms"
+        },
+        "_comment2": "Elements within string are OR and seperate elements are AND in form X < #",
+        "options": ["Mild", "Spicy"],
+        "Mild": ["E < 0.4, L < -6"],
+        "Spicy": ["E > 0.75, D > 0.55", "D > 0.75, E > 0.65"]
         
     }
     
