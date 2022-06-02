@@ -1,2 +1,2 @@
-# SpotifyPlaylistCreator
-Creates a workout and chill playlist for me
+# Spotify Playlist Creator
+
